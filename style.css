@@ -119,7 +119,7 @@ body {
 }
 .text-animation{
   font-weight: bold;
-  font-size: 30px;
+  font-size: 20px;
   min-width: 280px;
 }
 .text-animation span{
@@ -128,7 +128,7 @@ body {
 .text-animation span::before{
   content: "youtuber";
   color: var(--violet);
-  font-size: 25px;
+  font-size: 20px;
   text-transform: uppercase;
   animation: words 20s infinite;
 }
