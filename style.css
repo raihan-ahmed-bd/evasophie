@@ -1,0 +1,373 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  font-family: serif;
+}
+:root {
+  --violet: #ba5082;
+  --purple: #6f5f90;
+  --blue: #758eb7;
+  --aqua: #a5cad2;
+  --white: #fff;
+  --black: #000;
+  --bg: #ddd;
+  --dark-bg: #222;
+}
+a {
+  color: var(--black);
+  text-decoration: none;
+}
+body {
+  background: var(--bg);
+}
+.navbar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: .5fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  row-gap: .6em;
+  background: linear-gradient(-45deg, var(--violet), var(--purple));
+  height: 4.2rem;
+  padding: 0em 1em;
+  box-sizing: border-box;
+  overflow: none;
+  border-bottom: 0px solid var(--blue);
+  transition: height .3s ease-in-out;
+  z-index: 999;
+}
+.navbar .logo {
+  padding: 1em 2em;
+}
+.navbar .logo a {
+  font-size: 2rem;
+  font-family: cursive;
+  color: var(--white);
+}
+.navbar .menu {
+  display: flex;
+  justify-content: end;
+  align-items: start;
+  padding: 1.2em 2em;
+}
+.navbar .menu i {
+  font-size: 1.7rem;
+  color: var(--white);
+  cursor: pointer;
+}
+.navbar .pages {
+  border-top: 1px solid var(--blue);
+  grid-column-start: 1;
+  grid-column-end: 4;
+  transition: display 1s ease-in;
+  display: none;
+}
+.pages ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  list-style-type: none;
+  height: 100%;
+  padding: .5em;
+  box-sizing: border-box;
+}
+.pages ul li a {
+  text-transform: uppercase;
+  color: var(--white);
+}
+.navbar.expanded {
+  height: 8rem;
+}
+.header {
+  height: ;
+  box-sizing: border-box;
+}
+.header .intro-img {
+  height: 50dvh;
+  width: 100%;
+  margin: auto;
+  background: url("header.jpg");
+  background-size: cover;
+  background-position: center 15%;
+  background-repeat: no-repeat;
+  transition: 1s ease;
+}
+/* parallax scroll effect on image*/
+.header .intro-img:hover {
+  transform: rotate(5deg);
+  scale: .8;
+  box-shadow: 0px 0px 40px 10px var(--violet);
+}
+.header .intro {
+  padding: 1.5em;
+}
+.intro span:nth-child(1) {
+  font-size: 2rem;
+}
+.intro span:nth-child(2) {
+  font-size: 3.5rem;
+  color: transparent;
+  background: linear-gradient(45deg, var(--violet), var(--purple), var(--blue));
+  -webkit-background-clip: text;
+  display: block;
+}
+.intro span:nth-child(3) {
+  font-size: 1.5rem;
+}
+.text-animation{
+  font-weight: bold;
+  font-size: 30px;
+  min-width: 280px;
+}
+.text-animation span{
+  position: relative;
+}
+.text-animation span::before{
+  content: "youtuber";
+  color: var(--violet);
+  font-size: 25px;
+  text-transform: uppercase;
+  animation: words 20s infinite;
+}
+.text-animation span::after{
+  content: "";
+  background-color: var(--bg);
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 100%;
+  border-left: 2px solid var(--violet);
+  right: -8px;
+  animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+}
+@keyframes cursor {
+  to {border-left: none;}
+}
+@keyframes words {
+  0%, 20% {content: "youtuber";}
+  21%, 40% {content: "graphic designer";}
+  41%, 60% {content: "vfx expert";}
+  61%, 80% {content: "travel vlogger";}
+  81%, 100% {content: "photographer";}
+}
+@keyframes typing{
+  10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95% {
+    width: 0;
+}
+
+  5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85% {
+    width: calc(100% + 8px);
+}
+}
+#icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 5rem;
+  border-bottom: 2px solid var(--purple);
+}
+#icons i {
+  font-size: 1.5rem;
+  padding: .5em;
+  border-radius: 50%;
+  border: 1px solid var(--violet);
+  color: var(--violet);
+  box-shadow: 0px 0px 5px var(--violet);
+  transition: .5s ease all;
+  transform-origin: center;
+}
+#icons i:hover {
+  color: var(--bg);
+  background: var(--violet);
+  transform: rotateY(360deg);
+  box-shadow: 0px 0px 10px var(--violet);
+}
+.about {
+  background: #ccc;
+  padding: 1em;
+}
+.about span:nth-child(1) {
+  text-align: center;
+  font-size: 2.5rem;
+  line-height: 1.8;
+  display: block;
+}
+.about span:nth-child(2) {
+  line-height: 1.5;
+  display: block;
+  text-align: center;
+  margin-bottom: 1em;
+}
+.about span:nth-child(3) {
+  line-height: 1.5;
+  display: block;
+  
+}
+.about .address {
+  margin: 1em 0em 1em 3em;
+}
+.about .address p {
+  line-height: 2;
+}
+.about .address p i {
+  margin-right: 1em;
+}
+.about .skills {
+  
+}
+.skills span:nth-child(1) {
+  font-size: 2rem;
+  text-align: center;
+  display: block;
+}
+.skills div {
+  margin: .5em 0em 1em 0em;
+  background: #bbb;
+  padding: 1px;
+  border: .5px solid var(--black);
+  border-radius: 100vh;
+  overflow: hidden;
+}
+.skills div hr {
+  height: 1em;
+  background: linear-gradient(45deg, var(--purple), var(--violet));
+  border: none;
+  border-radius: 100vh 0 0 100vh;
+}
+.skills .graphic hr {
+  width: 90%;
+}
+.skills .vfx hr {
+  width: 30%;
+}
+.skills .photo hr {
+  width: 70%;
+}
+.services {
+  padding: 1.5em;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 1em;
+}
+.service1, .service2, .service3 {
+  border: 1px solid var(--purple);
+  border-radius: 1em;
+  padding: 1em;
+  transition: .5s ease;
+  box-shadow: 0px 0px 5px var(--purple);
+  transition: .5s ease-out;
+}
+.service1 i, .service2 i, .service3 i {
+  display: block;
+  text-align: center;
+  font-size: 4rem;
+}
+.service1:hover, .service2:hover, .service3:hover {
+  background: linear-gradient(45deg, var(--purple), var(--violet));
+  color: white;
+  transform: scale(1.02);
+  box-shadow: 0px 0px 10px var(--purple);
+}
+.service1 span, .service2 span, .service3 span {
+  line-height: 1.5;
+}
+.s-text {
+  display: block;
+  text-align: center;
+  line-height: 1.6;
+  font-size: 2rem;
+}
+.contact {
+  padding: 1em;
+  background: #ccc;
+}
+.contact span:nth-child(1) {
+  display: block;
+  text-align: center;
+  font-size: 2rem;
+}
+.contact span:nth-child(2) {
+  font-size: 1.3rem;
+  display: block;
+  text-align: center;
+}
+.contact form {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-row-gap: 1em;
+  padding: 1em;
+  caret-color: var(--violet);
+}
+.contact form textarea {
+  padding: .5em;
+  background: transparent;
+  border-radius: 3px;
+  border: 1px solid var(--purple);
+  box-shadow: 0px 0px 5px var(--purple);
+  font-size: 1.1rem;
+  color: gray;
+  transition: .5s ease;
+}
+form .inputs input {
+  margin: .5em 0em;
+  padding: .5em;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 3px;
+  border: 1px solid var(--purple);
+  background: transparent;
+  box-shadow: 0px 0px 5px var(--purple);
+  font-size: 1.1rem;
+  transition: .5s ease;
+}
+.contact form textarea:focus, form .inputs input:focus {
+  outline: none;
+  border: 1px solid var(--violet);
+  box-shadow: 0px 0px 10px var(--violet);
+  background: linear-gradient(to top, var(--violet), var(--purple));
+  -webkit-background-clip: text;
+  color: transparent;
+  background-size: 30%;
+}
+form .inputs .button {
+  border: none;
+  box-shadow: 0px 0px 10px var(--violet);
+  transition: .5s ease;
+}
+form .inputs .button:hover {
+  background: linear-gradient(45deg, var(--purple), var(--violet));
+  color: var(--white);
+  border: none;
+}
+form .inputs .button:active {
+  transform: scale(.8);
+}
+.footer {
+  background: #ccc;
+}
+.footer span:nth-child(1) {
+  text-align: center;
+  display: block;
+  font-size: 2rem;
+  font-family: cursive;
+  font-weight: bolder;
+  background: linear-gradient(45deg, var(--purple), var(--violet));
+  -webkit-background-clip: text;
+  color: transparent;
+  background-size: 2rem;
+}
+.footer-pages ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 5rem;
+}
+.footer .copyright {
+  background: #aaa;
+  padding: 1em;
+  text-align: center;
+}
